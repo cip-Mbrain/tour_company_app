@@ -246,14 +246,14 @@ About
 .about-info {
   margin-bottom: 2rem;
 }
-@media screen and (min-width: 992px){
-  .about-center{
+@media screen and (min-width: 992px) {
+  .about-center {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
   }
-  .about-img,.about-info{
+  .about-img,
+  .about-info {
     flex: 0 0 calc(50% - 2rem);
     margin-bottom: 0;
     align-self: center;
@@ -261,7 +261,7 @@ About
 }
 
 @media screen and (min-width: 1170px) {
-  .about-img::before{
+  .about-img::before {
     content: "";
     height: 100%;
     width: 100%;
@@ -276,18 +276,74 @@ About
     position: relative;
   } */
 
-  .about-img{
+  .about-img {
     position: relative;
   }
-
-  
-
 }
 /*
 =============== 
 Services
 ===============
 */
+.services {
+  background: var(--clr-grey-10);
+}
+.service {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: var(--clr-grey-9);
+  padding: 3rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+.service:hover {
+  transform: scale(1.02);
+}
+.service-icon {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+  padding: 0.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.service-text {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 576px) {
+  .service-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service {
+    flex: 0 0 calc(53% - 2rem);
+  }
+}
+@media screen and (min-width: 992px) {
+  .service {
+    flex: 0 0 calc((33.3% - 1rem));
+  }
+}
+@media screen and (min-width: 1170px) {
+  .service {
+    display: flex;
+    text-align: left;
+  }
+  .service-icon {
+    align-self: start;
+  }
+  .service-info {
+    padding-left: 1rem;
+  }
+  .service-title {
+    margin-bottom: 0.5rem;
+  }
+}
 
 /*
 =============== 
@@ -295,11 +351,149 @@ Featured Tours
 ===============
 */
 
+.featured-card {
+  background: var(--clr-grey-10);
+  box-shadow: var(--light-shadow);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  margin-bottom: 2rem;
+}
+
+.featured-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+
+.card-img-container {
+  position: relative;
+}
+
+.card-img {
+  height: 17rem;
+  object-fit: cover;
+}
+.card-img-container p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  background: var(--clr-primary-8);
+  color: var(--clr-grey-4);
+  padding: 0.2rem 0.35rem;
+  text-transform: capitalize;
+  /* font-weight: 600; */
+}
+.card-info {
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+
+.card-info-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info-footer p {
+  color: var(--clr-grey-4);
+}
+
+.card-btn {
+  text-align: center;
+}
+.card-btn-btn {
+  padding: 0.5rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .featured-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .featured-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .featured-card {
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
+
 /*
 =============== 
 Contact
 ===============
 */
+.contact {
+  background: var(--clr-primary-5);
+}
+
+.contact-title {
+  color: var(--clr-white);
+}
+.contact-title p {
+  color: var(--clr-primary-8);
+}
+
+.contact-form {
+  display: flex;
+  max-width: 28rem;
+}
+
+.form-control {
+  flex: 1 1 auto;
+  color: #222;
+  background: var(--clr-white);
+}
+
+.form-control,
+.submit-btn {
+  line-height: 1.5;
+  font-size: 1rem;
+  padding: .375rem .75rem;
+  font-weight: 300;
+  border: transparent;
+}
+
+.form-control::placeholder{
+  color: var(--clr-grey-5);
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+}
+
+.submit-btn{
+  margin-left: .5rem;
+  font-family: var(--ff-primary);
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-1);
+  text-transform: capitalize;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-btn:hover{
+  background: var(--clr-primary-4);
+  color: var(--clr-primary-10);
+}
+
+@media screen and (min-width:992px) {
+  .contact-center{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .contact-form{
+    flex: 1;
+    align-self: start;
+    max-width: 30rem;
+    /* padding-left: 2rem; */
+    margin-left: 2rem;
+  }
+}
 
 /*
 =============== 
