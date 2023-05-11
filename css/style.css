@@ -500,9 +500,97 @@ Contact
 Gallery
 ===============
 */
+.gallary-container{
+  background: var(--clr-grey-8);
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container span{
+  font-size: 1.7rem;
+  color: var(--clr-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50% 50%);
+  opacity: 0;
+}
+.img-container:hover span{
+  opacity: 1;
+}
+.img-container:hover{
+  opacity: .67;
+}
+
+@media screen and (min-width:768px) {
+  .gallary-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img-container{
+    flex: 1 1 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .img-container{
+    flex: 1 1 25%;
+  }
+}
 
 /*
 =============== 
 Footer
 ===============
 */
+
+/* .footer{
+  background: var(--clr-grey-1);
+  padding: 3rem 0;
+}
+
+.footer-link {
+display: flex;
+justify-content: center;
+}
+.footer-link p{
+  margin-left: .7rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+
+.footer-link  a{
+  color: var(--clr-white);
+}
+
+.footer-link a:hover{
+  color: var(--clr-grey-5);
+}
+
+.footer-icon a{
+  color: var(--clr-white);
+}
+
+.footer-icon{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icon a{
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
+.footer-icon a:hover{
+ color: var(--clr-grey-4);
+}
+
+.footer-info{
+  text-align: center;
+  margin-top: .75rem;
+}
+.footer-info p{
+  color: var(--clr-primary-7);
+} */
