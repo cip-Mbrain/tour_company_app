@@ -545,52 +545,44 @@ Gallery
 Footer
 ===============
 */
-
-/* .footer{
+.footer{
   background: var(--clr-grey-1);
-  padding: 3rem 0;
+  text-align: center;
 }
-
-.footer-link {
-display: flex;
-justify-content: center;
-}
-.footer-link p{
-  margin-left: .7rem;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  transition: var(--transition);
-}
-
-.footer-link  a{
-  color: var(--clr-white);
-}
-
-.footer-link a:hover{
-  color: var(--clr-grey-5);
-}
-
-.footer-icon a{
-  color: var(--clr-white);
-}
-
-.footer-icon{
+.footer-links, .footer-icons{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
-.footer-icon a{
-  padding-left: 1rem;
-  font-size: 1.2rem;
-}
-.footer-icon a:hover{
- color: var(--clr-grey-4);
+.footer-link{
+color: var(--clr-white);
+margin-right: 1rem;
+font-size: 1rem;
+text-transform: capitalize;
+letter-spacing: var(--spacing);
+transition: var(--transition);
 }
 
-.footer-info{
-  text-align: center;
-  margin-top: .75rem;
+.footer-link:hover{
+  color: var(--clr-primary-5);
 }
-.footer-info p{
-  color: var(--clr-primary-7);
-} */
+
+.footer-icon {
+  color: var(--clr-primary-10);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+.footer-icon:hover{
+  color: var(--clr-primary-5);
+}
+
+.copywrite {
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
